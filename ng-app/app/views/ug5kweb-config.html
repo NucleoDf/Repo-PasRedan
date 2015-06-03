@@ -1,0 +1,47 @@
+
+    <h1>Configuraciones</h1>
+   
+      <section id="_tabs">
+        <ul class="tabs" data-persist="true">
+          <li>
+            <a href="" data-ng-click="vm.Pagina(0)" data-ng-class="{&#39;tabsel&#39;: vm.pagina==0}">Operaciones Generales</a>
+          </li>
+          <li>
+            <a href="" data-ng-click="vm.Pagina(1)" data-ng-class="{&#39;tabsel&#39;: vm.pagina==1}">Preconfiguraciones</a>
+          </li>
+        </ul>
+      </section>
+        <section id="_contenido">
+            <table class="ug5ktb" data-ng-show="vm.pagina==0">
+                <tr>
+                    <td class="_cab">Guardar Cambios</td>
+                    <td>
+                        <button class="button" data-ng-click="vm.salvar()" data-ng-disabled="gvm.enable(32)==0">...</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="_cab">Descartar Cambios</td>
+                    <td>
+                        <button class="button" data-ng-click="vm.descartar()" data-ng-disabled="gvm.enable(32)==0">...</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="_cab">Guardar Como...</td>
+                    <td>
+                        <input data-ng-model="vm.preconfname" data-ng-disabled="gvm.enable(32)==0" />
+                        <button class="button" data-ng-click="vm.salvarcomo()" data-ng-disabled="gvm.enable(32)==0">...</button>
+                    </td>
+                </tr>
+            </table>
+            <table class="ug5ktb" data-ng-show="vm.pagina==1">
+                <tr data-ng-repeat="pre in vm.preconf.preconfs">
+                    <td class="_cab">{{pre.name + " (" + pre.date + ")"}}</td>
+                    <td>
+                        <button class="button" data-ng-disabled="gvm.enable(32)==0" data-ng-click="vm.activar(pre)">Act.</button>
+                        <button class="button" data-ng-disabled="gvm.enable(32)==0" data-ng-click="vm.eliminar(pre)">Bor.</button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+  <!--</body>
+</html>-->

@@ -1,0 +1,112 @@
+/** */
+.ug5ktb {
+    margin: 0;
+    padding: 10px;    
+    width: 65%;
+    margin-left: 1%;
+    margin-top: 10px;
+    float:left;
+
+}
+.tbBotones{
+    padding:10px;
+    margin:10px;
+    margin-top:0;
+	margin-left:20px;
+    background-color:white;
+    width:620px;
+    float:left;
+
+}
+.ug5ktb  td {
+	margin: 40px;
+	text-align: right;
+    border:5px groove grey;
+	border-width:0 0 1px 0;
+	padding:0.5em;    
+    background-color:white;
+}
+
+.ug5ktb td._cab{
+	text-align: left;
+    margin-left:10px;
+    width:28%;
+    background-color:white;
+    font-weight:bold;
+
+}
+
+.ug5ktb tr {  
+	text-align:right;
+	padding:1px;
+    padding-left:20px;
+	font-size:13px;
+	font-family:Verdana;
+	font-weight:normal;
+	color: #C1012C;    
+    background-color: white;
+    padding-right:10px;
+    margin-top:5px;   
+}
+
+.ug5ktb input {
+	text-align: right;
+	border: none;
+	padding: 5px;
+	width: 15em;
+    border:1px solid grey;
+    margin-right:10px;
+}
+
+.ug5ktb #selectCorto {
+	width:80px;
+  
+   
+}
+
+.ug5ktb select {
+	width:140px;
+    margin-right:10px;
+    padding-left:5px;
+}
+.ug5ktb #selectLargo {
+	width:180px;
+   
+}
+
+
+.ug5ktb input.ian {
+	width: 20em;
+}
+
+
+div._listaifaces{
+    width:25%;
+    float:right;
+    display:inline;
+    height:320px;
+    margin-top:17px;
+    margin-right:60px;
+    border:1px solid white;
+}
+._textLista{
+    text-align:left;
+    margin-left:10px;
+    padding-top:2px;
+    font-weight:bold;
+}
+.selectList {
+    margin-left:5px;
+    width: 160px    ;
+    margin-top:6px;
+}
+ p
+{
+    margin:0;   
+    padding-top:2px;
+    margin-top: 6px;
+    margin-bottom: 3px;
+    margin-left:0;
+    text-align:center;
+}
+

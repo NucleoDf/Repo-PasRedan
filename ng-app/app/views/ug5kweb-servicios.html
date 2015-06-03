@@ -1,0 +1,48 @@
+    <h1>Configuracion de Servicios</h1>
+    <section id="_tabs">
+      <ul class="tabs" data-persist="true">
+        <li>
+          <a href="" data-ng-click="vm.set_index(0)" data-ng-class="{'tabsel': vm.index==0}">Servicio SIP</a>
+        </li>
+        <li>
+          <a href="" data-ng-click="vm.set_index(1)" data-ng-class="{'tabsel': vm.index==1}">Sincronizacion</a>
+        </li>
+        <li>
+          <a href="" data-ng-click="vm.set_index(2)" data-ng-class="{'tabsel': vm.index==2}">Agente SNMP</a>
+        </li>
+        <li>
+          <a href="" data-ng-click="vm.set_index(3)" data-ng-class="{'tabsel': vm.index==3}">Servicio Web</a>
+        </li>
+        <li>
+          <a href="" data-ng-click="vm.set_index(4)" data-ng-class="{'tabsel': vm.index==4}">Interface Grabador</a>
+        </li>
+      </ul>
+    </section>
+    <section id="_contenido">
+      <div id="ntp">
+		<table class="ug5ktb">
+			<tr data-ng-repeat="item in vm.data" >
+				<td class="_cab">{{item.Name}}</td>
+				<td data-ng-switch on="item.Input">
+					<input type="text" data-ng-switch-when="0"  data-ng-model="item.Value" data-ng-disabled="item.Enable==false || gvm.enable(32)==0"/>
+					<select data-ng-switch-when="1" data-ng-model="item.Value" data-ng-disabled="item.Enable==false || gvm.enable(32)==0">
+						<option data-ng-repeat="valor in item.Inputs" data-ng-selected="{{$index==item.Value}}" value="{{$index}}">{{valor}}</option>
+					</select>
+					<ol data-ng-switch-when="2" data-ng-disabled="item.Enable==false || gvm.enable(32)==0">
+					  <li data-ng-repeat="item1 in item.Value track by $index" style="list-style-type:none">
+						<input type="text" data-ng-model="item.Value[$index]" />
+					  </li>					
+					</ol>
+				</td>
+			</tr>
+		</table>
+        <table  class="tbBotones">
+          <tr>  <td></td>         
+            <td>
+				<button class="buttonLargo" data-ng-click="vm.restore()" >Descartar Cambios</button>
+<!--                <button class="button" ng-click="vm.post_data()" ng-show="gvm.enable(32)==1">Enviar</button> -->                  </td> </tr>
+        </table>
+      </div>
+    </section>
+  <!--</body>
+</html>-->
