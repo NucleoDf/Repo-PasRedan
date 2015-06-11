@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es" data-ng-app="Ug5kweb">
+<head>
+    <meta name="generator"
+          content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta charset="windows-1252" />
+    <meta name="description" content="Plantilla Ulises 5000" />
+    <meta name="keywords" content="HTML5, CSS3, JavaScript" />
+    <title>UG5K.Configuracion y Mantenimiento</title>
+    <!-- Estilos  -->
+    <link rel="stylesheet" href="./styles/u5k-styles.css" />
+    <link rel="stylesheet" href="./styles/ug5k-table.css" />
+    <link rel="stylesheet" href="./styles/tabcontent.css" />
+    <link rel="stylesheet" href="./styles/ngDialog.css" />
+    <link rel="stylesheet" href="./styles/ngDialog-theme-default.min.css" />   
+</head>
+<body onload="ndrelojSystem()">
+    <div id="agrupar" data-ng-controller="ug5kGlobalCtrl as gvm">
+        <header id="cabecera">
+            <div id="_contSupIzq">
+                <div id="_logo">                   
+                            <img src="styles/nucleo-df-new.jpg" />
+                </div>              
+            </div>
+            <div id="_tit_ppal">
+                <h2>Ulises G5000 R</h2>
+            </div>
+            <div id="_contSupDrcha">
+                <div id="_usuario">
+                    Usuario: <b>{{gvm.user}}</b>
+                </div>
+                <div id="_hfecha">{{gvm.date}}</div>
+                <div id="_hsolohora"> {{gvm.hora}}</div>
+            </div>
+        </header>
+        <!--<section id="_separador"></section>-->
+        <nav id="_menu">
+            <h3>Opciones</h3>
+            <ul>
+                <li>
+                    <a href="#/">C. Generales</a>
+                </li>
+                <li>
+                    <a href="#/hard">Hardware</a>
+                </li>
+                <li>
+                    <a href="#/precr">Radio</a>
+                <li>
+                    <a href="#/prect">Telefonia</a>
+                </li>
+                <li>
+                    <a href="#/serv">Servicios</a>
+                </li>
+                <li>
+                    <a href="#/pconf">Configuracion</a>
+                </li>
+                <li>
+                    <a href="/#pmant">Mantenimiento</a>
+                </li>
+                <li style="margin-top:90px; border:1px solid #C1012C;border-left:0;border-bottom:2px solid #C1012C;border-right:2px solid #C1210C">
+                    <a href="#" i data-ng-click="gvm.logout()">Logout</a>
+                </li>
+            </ul>
+        </nav>
+      
+        <section id="_ppal">
+            <div data-ng-view></div>
+        </section>
+
+        <footer id="_pie">DF Nucleo Copyright @2015. Todos los Derechos Reservados.</footer>
+    </div>
+
+    <!-- inject-vendor:js -->
+    <!-- <script src="./scripts/tabcontent.js"></script> -->
+    <script src="./scripts/jquery-2.1.3.min.js"></script>
+    <script src="./scripts/angular.min.js"></script>
+    <script src="./scripts/angular-route.js"></script>
+    <script src="./scripts/ngDialog.min.js"></script>
+
+    <!-- inject-app:js -->
+    <script src="./app/modules/ug5kweb.js"></script>
+    <script src="./app/services/logger.js"></script>
+    <script src="./app/services/Simulador.js"></script>
+    <script src="./app/services/ug5kCommService.js"></script>
+    <script src="./app/services/ug5kAuthService.js"></script>
+    <script src="./app/services/ug5kCfgService.js"></script>
+    <script src="./app/routes/ug5kRoutes.js"></script>
+    <script src="./app/controllers/ug5kGlobalCtrl.js"></script>
+    <script src="./app/controllers/ug5kInicioCtrl.js"></script>
+    <script src="./app/controllers/ug5kHardCtrl.js"></script>
+    <script src="./app/controllers/ug5kRecrCtrl.js"></script>
+    <script src="./app/controllers/ug5kRectCtrl.js"></script>
+    <script src="./app/controllers/ug5kServCtrl.js"></script>
+    <script src="./app/controllers/ug5kMantCtrl.js"></script>
+    <script src="./app/controllers/ug5kConfCtrl.js"></script>
+
+    <!-- inject-app:js -->
+    <script src="./scripts/u5k-prog.js"></script>
+    
+
+</body>
+</html>

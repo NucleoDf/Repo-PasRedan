@@ -1,0 +1,54 @@
+    <h1>Mantenimiento</h1>
+    <section id="_tabs">
+      <ul class="tabs" data-persist="true">
+        <li>
+          <a href="" data-ng-click="vm.set_pagina(0)" data-ng-class="{'tabsel': vm.pagina==0}">General</a>
+        </li>
+        <li>
+          <a href="" data-ng-click="vm.set_pagina(1)" data-ng-class="{'tabsel': vm.pagina==1}">Equipos Radio</a>
+        </li>
+        <li>
+          <a href="" data-ng-click="vm.set_pagina(2)" data-ng-class="{'tabsel': vm.pagina==2}">Lineas Telefonicas</a>
+        </li>
+      </ul>
+    </section>
+    <section id="_contenido">
+      <div id="general" data-ng-show="vm.pagina==0">
+        <table class="ug5ktb" >
+            <tr>
+                <td class="_cab">CPU Activa</td><td>{{vm.cpusel}}</td>
+                <td>
+                    <button class="buttonLargo" data-ng-click="vm.cpu_cambiar()" data-ng-disabled="gvm.enable(32)==0">Cambiar</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="_cab">Versiones Software</td>
+                <td>
+<!--                    <input type="file" id="file" name="file" class="button"/> -->
+                </td>
+                <td>
+                    <button class="buttonLargo" data-ng-click="gvm.software_load()" data-ng-disabled="gvm.enable(32)==0">Actualizar</button>
+                </td>
+            </tr>
+            <tr data-ng-repeat="ver in vm.versiones">
+              <td></td>
+              <td data-ng-class="{'negrita': ver.activa==true, '_cab': true}">{{ver.id}}</td>
+              <td>
+                <button class="buttonLargo" data-ng-disabled="(gvm.enable(32)==0 || ver.activa==true)" data-ng-click="vm.software_activar(ver.id)">Activar</button>
+              </td>
+            </tr>
+            <tr>
+                <td class="_cab">Reiniciar Unidad</td><td></td>
+                <td>
+                    <button class="buttonLargo" data-ng-click="vm.reset()" data-ng-disabled="gvm.enable(32)==0">RESET</button>
+                </td>
+            </tr>
+        </table>
+      </div>
+      <div id="Radio" data-ng-show="vm.pagina==1">
+          <h2>Radio</h2>
+      </div>
+      <div id="Telefonia" data-ng-show="vm.pagina==2">
+          <h2>General</h2>
+      </div>
+    </section>

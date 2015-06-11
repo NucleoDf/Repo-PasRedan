@@ -1,0 +1,94 @@
+    <h1>Configuracion Hardware</h1>
+    <section id="_tabs">
+      <ul class="tabs" data-persist="true">
+        <li>
+          <a href="" data-ng-click="vm.set_slv(0)" data-ng-class="{'tabsel': vm.slv==0}">Tarjeta 0</a>
+        </li>
+        <li>
+          <a href="" data-ng-click="vm.set_slv(1)" data-ng-class="{'tabsel': vm.slv==1}">Tarjeta 1</a>
+        </li>
+        <li>
+          <a href="" data-ng-click="vm.set_slv(2)" data-ng-class="{'tabsel': vm.slv==2}">Tarjeta 2</a>
+        </li>
+        <li>
+          <a href="" data-ng-click="vm.set_slv(3)" data-ng-class="{'tabsel': vm.slv==3}">Tarjeta 3</a>
+        </li>
+      </ul>
+    </section>
+    <section id="_contenido">
+      <div id="slv0">
+        <table class="ug5ktb">
+          <!--<tr>
+            <td></td>
+          </tr>-->
+          <tr>
+            <td class="_cab">TIPO</td>
+            <td>
+              <select id="selectCorto" data-ng-model="vm.jslv.tp" <!--disabled="disabled"-->>
+                <option value="0">IA4</option>
+                <option value="1">IQ1</option>
+              </select>
+            </td>
+          </tr>
+          <!--<tr>
+            <td class="_cab">ESTADO</td>
+            <td>
+              <select data-ng-model="vm.jslv.std" disabled="disabled">
+                <option value="0">No Presente</option>
+                <option value="1">Presente</option>
+              </select>
+            </td>
+          </tr>-->
+          <tr>
+            <td>Posicion 0</td>
+            <td>
+              <select data-ng-model="vm.jslv.pos[0].cfg" data-ng-disabled="gvm.enable(32)==0" data-ng-change="vm.pos_change()">
+                <option value="0">No Configurado</option>
+                <option value="1" selected="selected">Radio</option>
+                <option value="2">Telefonia</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Posicion 1</td>
+            <td>
+              <select  data-ng-model="vm.jslv.pos[1].cfg" data-ng-disabled="gvm.enable(32)==0" data-ng-change="vm.pos_change()">
+                <option value="0">No Configurado</option>
+                <option value="1" selected="selected">Radio</option>
+                <option value="2">Telefonia</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Posicion 2</td>
+            <td>
+              <select data-ng-model="vm.jslv.pos[2].cfg" data-ng-disabled="gvm.enable(32)==0" data-ng-change="vm.pos_change()">
+                <option value="0">No Configurado</option>
+                <option value="1" selected="selected">Radio</option>
+                <option value="2">Telefonia</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Posicion 3</td>
+            <td>
+              <select data-ng-model="vm.jslv.pos[3].cfg" data-ng-disabled="gvm.enable(32)==0" data-ng-change="vm.pos_change()">
+                <option value="0">No Configurado</option>
+                <option value="1" selected="selected">Radio</option>
+                <option value="2">Telefonia</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+              </table>
+          <table class="tbBotones">
+              <tr>
+                  <td></td>
+                  <td><button class="buttonLargo" data-ng-click="vm.restore()" >Descartar Cambios</button>
+<!--                <button class="button" data-ng-click="vm.post_data(vm.slv)" data-ng-show="gvm.enable(32)==1">Enviar</button> -->
+			      </td>
+              </tr>
+          </table>
+        </table>
+      </div>
+    </section>

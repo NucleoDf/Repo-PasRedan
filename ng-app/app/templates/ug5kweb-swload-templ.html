@@ -1,0 +1,14 @@
+    <h1>Carga de Software</h1>
+    <section id="_contenido" data-ng-controller="ug5kGlobalCtrl as gvm">
+      <div>
+          <!--
+          <form method="POST" action="/sw_upload" enctype="multipart/form-data">
+              <input type="file" name="file" />
+              <br />
+              <input class="button" type="submit" value="Cargar" />
+          </form>
+          -->
+		<input type="file" data-file-model="myFile"/>
+        <button class="button" data-ng-click="gvm.software_load_send()" >Cargar</button>
+      </div>
+    </section>
